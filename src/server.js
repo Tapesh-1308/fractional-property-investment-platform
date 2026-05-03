@@ -55,7 +55,6 @@ app.get("/", (req, res) => {
                 version: '1.0.0',
                 endpoints: {
                     health: '/health',
-                    // TODO: Add more endpoints as they are implemented
                 },
             },
             'Fractional Property Investment Platform'

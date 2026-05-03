@@ -19,10 +19,6 @@ This product helps investors participate in real estate investments even with sm
 
 
 
-Here’s your updated **Features section** with improved wording and the additional points included cleanly:
-
----
-
 ## Features
 
 1. Create a new property and fetch its details
@@ -54,8 +50,6 @@ Here’s your updated **Features section** with improved wording and the additio
    * Runs server, PostgreSQL, and pgAdmin automatically
    * Auto-executes migrations and seeds temporary user data
 
----
-
 ### Additional Enhancements (Often Overlooked)
 
   * Helmet for securing HTTP headers
@@ -68,8 +62,6 @@ Here’s your updated **Features section** with improved wording and the additio
   * Connection pooling
   * Indexing for faster queries
   * Triggers for maintaining data integrity
-
----
 
 ## Postman Collection
 
@@ -152,7 +144,7 @@ services/
 
 ## Setup Instructions:
 
-### Option 1: Setup Using Docker
+### Option 1: Setup Using Docker ( One command )
 
 #### Prerequisites
 
