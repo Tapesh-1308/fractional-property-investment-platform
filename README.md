@@ -1,3 +1,28 @@
+# Fractional Property Investment Platform
+
+## Index
+
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Additional Enhancements](#additional-enhancements-often-overlooked)
+- [Postman Collection](#postman-collection)
+- [Architecture Overview](#architecture-overview)
+- [Folder Structure](#folder-structure)
+- [Setup Instructions](#setup-instructions)
+  - [Docker Setup](#option-1-setup-using-docker--one-command-)
+  - [Local Setup](#option-2-setup-without-docker)
+- [API Documentation](#api-documentation)
+  - [Create Property](#1-create-property)
+  - [Get Property](#2-get-property-by-id)
+  - [User Portfolio](#3-get-user-portfolio)
+  - [Wallet Top-up](#4-wallet-top-up)
+  - [Create Investment](#5-create-investment)
+  - [Withdraw Investment](#6-withdraw-investment)
+- [Design Decisions & Assumptions](#design-decisions--assumptions)
+- [Core Flows](#core-flows)
+- [Video Demonstration](#video-demonstration)
+
 ## Introduction
 
 A simplified **Fractional Property Investment Platform**, inspired by a core product primitive at Per Annum.
@@ -106,7 +131,7 @@ Each module contains:
 * Repository Interface Pattern for data access abstraction
 
 
-## Folder Structure (Simplified)
+## Folder Structure
 
 ```text
 services/
@@ -166,6 +191,7 @@ Also ensure the following ports are available:
 
 ```bash
 mkdir fractional-property-investment-platform
+cd fractional-property-investment-platform
 git clone https://github.com/Tapesh-1308/fractional-property-investment-platform.git .
 ```
 
@@ -684,3 +710,9 @@ Aggregate and compose response
    ↓
 Return from Portfolio Service
 ```
+
+## Video Demonstration
+
+You can watch a complete walkthrough of the project, including setup and API usage here:
+
+[Video Drive Link](https://drive.google.com/file/d/1EmUy8hLRmZfMFTt5dnqL66nj_JPiy9jm/view?usp=sharing)
