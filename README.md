@@ -244,7 +244,83 @@ docker compose down -v
 
 ### Option 2: Setup Without Docker
 
-> *(To be added)*
+#### Create Database
+
+```bash
+psql -U postgres
+```
+
+Inside `psql`:
+
+```sql
+CREATE DATABASE fractional_property_investment;
+\q
+```
+
+---
+
+#### Configure Environment
+
+Create a `.env` file in the project root:
+
+```env
+# Server
+NODE_ENV=development
+PORT=5000
+
+# Postgres
+PG_HOST=localhost
+PG_PORT=5432
+PG_DATABASE=fractional_property_investment
+PG_USER=postgres
+PG_PASSWORD=tapesh
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=90000
+RATE_LIMIT_MAX_REQUESTS=1000
+
+# Investment Rate Limiting
+INVESTMENT_RATE_LIMIT_WINDOW_MS=90000
+INVESTMENT_RATE_LIMIT_MAX_REQUESTS=20
+```
+
+>  Use your actual Postgres password.
+
+---
+
+#### Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+#### Initialize Database (Schema + Seed)
+
+```bash
+npm run db:init
+```
+
+---
+
+#### Verify Data (Optional)
+
+```bash
+psql -U postgres -d fractional_property_investment
+```
+
+```sql
+SELECT * FROM users;
+```
+
+---
+
+#### Start Application
+
+```bash
+npm start
+```
 
 ---
 
