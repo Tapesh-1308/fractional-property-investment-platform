@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "a8fc92da-23ba-49dd-8316-33a5c2e3aecc",
+		"name": "Fractional Property Investment Platform",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44496974",
+		"_collection_link": "https://tapeshdua.postman.co/workspace/Tapesh-Dua's-Workspace~168b47e8-8a82-4613-8abf-3ca60a070b65/collection/44496974-a8fc92da-23ba-49dd-8316-33a5c2e3aecc?action=share&source=collection_link&creator=44496974"
+	},
+	"item": [
+		{
+			"name": "Create Property",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"total_value\": 10000000,\n    \"total_slots\": 100\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/property",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"property"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Property By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}api/property/1",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"property",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Portfolio",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/portfolio/1",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"portfolio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wallet Top up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\": 1000000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/user/1/wallet/topup",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"user",
+						"1",
+						"wallet",
+						"topup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Investment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": 1,\n    \"property_id\": 1,\n    \"slots\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/investment/",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"investment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Withdraw Investment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}api/investment/1/withdraw",
+					"host": [
+						"{{BASE_URL}}api"
+					],
+					"path": [
+						"investment",
+						"1",
+						"withdraw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
